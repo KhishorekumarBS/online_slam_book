@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>#itians unITed</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<style type="text/css">
+	.btn {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+.btn:hover {opacity: 1}
+textarea {
+  height:50%;
+}
+
+
+</style>
+<body>
+
+	<nav class="navbar navbar-dark bg-dark">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<a class="navbar-brand" href="/home">unITed</a>
+    		</div>
+    		<ul class="nav navbar-nav navbar-right">
+      			<li><a href="/logout">Logout</a></li>
+    		</ul>
+  		</div>
+	</nav>
+	<br><br>
+	<div class="container">
+	<div class="row ">
+			<div class="col-md-4">
+			<div class="card" id="divv" >
+				<img class="card-img-top" id="imgg"> 
+				<div class="card-body">
+				<h5 class="card-title"></h5>
+				</div>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<div class="form-group">
+					<input type="text" class="form-control" style="margin-bottom: 10px;"name="confess" placeholder="Confession">
+					<input type="text" class="form-control" name="dare" placeholder="Dare"><br>
+					<input type="file" class="btn" style="opacity:1">
+					<input type="file" class="btn" style="opacity:1">
+				</div>
+			</div>
+	</div>
+	<div class="row ">
+			<div class="col-md-4">
+			<div class="card" id="divv" >
+				<img class="card-img-top" id="imgg"> 
+				<div class="card-body">
+				<h5 class="card-title"></h5>
+				</div>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<form id="uploadForm" enctype="multipart/form-data" action="/upload_stockfile" method="post">
+      				Upload Stockfile :
+        			<input class="form-control" type="text" placeholder="Enter id" name="stock_key"> 
+        			<input type="file" name="sfile">
+        			<input type="text" name="rollno" value="2016" readonly="true">
+        			<input type="submit" class="btn btn-primary" value="Submit">
+      			</form>
+			</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var src = "birthday.jpg";
+		$('#divv').prepend($('<img>',{id:'imgg',src:src}))
+	})
+</script>
+</body>
+</html>

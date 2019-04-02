@@ -1,0 +1,23 @@
+{
+  "name": "node-rest-auth",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "~1.9.2",
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "latest",
+    "ejs": "latest",
+    "express": "~4.9.8",
+    "express-session": "^1.15.6",
+    "jwt-simple": "*",
+    "mongoose": "~4.2.4",
+    "morgan": "~1.5.0",
+    "nodemailer": "*",
+    "nodemon": "^1.14.6",
+    "passport": "^0.3.0",
+    "passport-facebook": "~2.0.0",
+    "passport-jwt": "^1.2.1",
+    "passport-local": "~1.0.0",
+    "path": "*"
+  }
+}

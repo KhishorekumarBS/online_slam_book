@@ -118,7 +118,7 @@ textarea {
                   url: "/user_general",
                   data:{ id:<%= user._id %>,confession: confession.value,dare:dare.value,nickname:nickname.value,nomination:nomination.value },
                   success: function(docs) {
-                   //alert('done');
+                   alert('done');
                 },
                 error: function(jqXHR, textStatus, err) {
                   alert("Error.. Please restart the application");

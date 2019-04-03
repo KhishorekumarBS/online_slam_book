@@ -91,6 +91,7 @@ textarea {
 
 					<form enctype="multipart/form-data" action=/upload_memory_pic/<%= user.id %> method="POST">
 					<label for="memories_pic">Share your memories with <%= user.name %></label><br>
+					<small>The writer will be  recorded and this will be revealed to <%= user.name %> after farewell</small><br>
 					<input type="file" style="opacity:1" name="sfile">
 					<input type="submit" style="opacity:1" id="memories_pic" class="btn btn-sm" value="Upload Memorable Pics">
 					</form>

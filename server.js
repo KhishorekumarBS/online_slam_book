@@ -120,9 +120,17 @@ app.post('/user_memories', function(req, res) {
 
 
 app.get('/profile/:id', function(req, res) {
-        User.findOne({ '_id': req.params.id }).exec(function(err, docs)  { 
-          res.render('singleusers',{ user : docs });
-        });
+         sess = req.session;
+          console.log(sess.rollno);
+          if(sess.rollno)
+            {
+              User.findOne({ '_id': req.params.id }).exec(function(err, docs)  { 
+                res.render('singleusers',{ user : docs });
+               });
+            }
+          else
+            res.redirect('/');
+        
     });
 
 

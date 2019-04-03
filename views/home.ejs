@@ -43,13 +43,13 @@
 	{
 		
 		$.each(docs, function (i) {
-          if(i%4==0)
+          if(i%3==0)
 			{	$("#people").append('</div><br><div class="row" id="row'+i.toString()+'"></div>');
 				rownum=i;
 			}
 			var imgfile;
 
-    		$("#row"+rownum.toString()).append('<div class="col-md-3"><a href="/profile/'+docs[i]._id+'"><div class="card" style="width: 18rem;"><img class="card-img-top" src="./profile_pics/'+docs[i]._id+'.jpg" alt="Card image cap"> <div class="card-body"><h5 class="card-title">'+docs[i].name+'</h5></div></div></a></div>');
+    		$("#row"+rownum.toString()).append('<div class="col"><a href="/profile/'+docs[i]._id+'"><div class="card" style="width: 18rem;"><img class="card-img-top img-responsive" src="./profile_pics/'+docs[i]._id+'.jpg"> <div class="card-body"><h5 class="card-title">'+docs[i].name+'</h5></div></div></a></div>');
         });
 		
 	}
